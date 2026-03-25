@@ -179,11 +179,7 @@ h2::before { content: ''; width: 5px; height: 24px; background-color: var(--prim
     font-weight: 500;
 }
 
-.alerta-estrutural ul li::before {
-    content: '⚠️';
-    position: absolute;
-    left: 0;
-    font-size: 0.9em;
+
 }
 
 /* GALERIA LATERAL */
