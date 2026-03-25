@@ -12,6 +12,10 @@ html {
     --text-main: #1e293b;
     --text-muted: #475569;
     --border-light: #e2e8f0;
+    /* Cores para o Alerta Estrutural */
+    --alert-red: #ef4444;
+    --alert-bg: #fef2f2;
+    --alert-text: #991b1b;
 }
 
 body {
@@ -139,6 +143,50 @@ section:last-child { border-bottom: none; }
 h2 { color: var(--dark-blue); font-size: 1.6em; display: flex; align-items: center; }
 h2::before { content: ''; width: 5px; height: 24px; background-color: var(--primary-blue); margin-right: 15px; border-radius: 3px; }
 
+/* SEÇÃO DE ALERTA E SITUAÇÃO ATUAL */
+.alerta-estrutural {
+    background-color: var(--alert-bg);
+    border: 1px solid #fee2e2;
+    border-left: 6px solid var(--alert-red);
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.alerta-estrutural h2 { color: var(--alert-text); }
+.alerta-estrutural h2::before { background-color: var(--alert-red); }
+
+.badge-risco {
+    background-color: var(--alert-red);
+    color: #ffffff;
+    font-size: 0.6em;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-left: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+.alerta-estrutural ul { list-style: none; padding-left: 0; }
+.alerta-estrutural ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    color: var(--alert-text);
+    font-weight: 500;
+}
+
+.alerta-estrutural ul li::before {
+    content: '⚠️';
+    position: absolute;
+    left: 0;
+    font-size: 0.9em;
+}
+
+/* GALERIA LATERAL */
 .fotos-lateral img { width: 100%; border-radius: 12px; margin-bottom: 20px; transition: transform 0.3s ease; }
 .fotos-lateral img:hover { transform: scale(1.03); }
 
