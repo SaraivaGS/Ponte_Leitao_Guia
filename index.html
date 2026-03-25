@@ -49,17 +49,15 @@
                 <p>A estrutura foi uma artéria vital para consolidar a economia agroexportadora da região, que vivia um período de grande riqueza com a cana-de-açúcar e o algodão.</p>
                 <ul>
                     <li><strong>Escoamento:</strong> Permitiu o transporte contínuo da produção dos grandes engenhos até o antigo Porto de Salema.</li>
-                    <li><strong>Consolidação das Usinas:</strong> Garantiu que as usinas de açúcar mantivessem o fluxo logístico sem depender das estações secas do rio, acelerando a acumulação de capital da elite agrária.</li>
+                    <li><strong>Consolidação das Usinas:</strong> Garantiu que as usinas de açúcar mantivessem o fluxo logístico sem depender das estações secas do rio.</li>
                 </ul>
             </section>
 
             <section id="localizacao">
                 <h2>Cenário e Localização Atual</h2>
-                <p>Situada na zona rural do município, próximo à antiga Fazenda Leitão, a ponte hoje atrai visitantes por sua beleza natural e arquitetura centenária contrastando com as pedras do rio.</p>
-                <p><strong>Desafios:</strong> Atualmente, a estrutura sofre com a falta de conservação. Além disso, a intensa atividade agrícola nas margens causou assoreamento, alterando a dinâmica hídrica original do trecho.</p>
-                
+                <p>Situada na zona rural do município, próximo à antiga Fazenda Leitão, a ponte hoje atrai visitantes por sua beleza natural.</p>
                 <div class="mapa-container">
-                    <iframe src="https://maps.google.com/maps?q=Ponte%20do%20leitão,%20Mamanguape%20-%20PB&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://maps.google.com/maps?q=Ponte%20do%20leitão,%20Mamanguape%20-%20PB&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </section>
         </div>
@@ -74,10 +72,15 @@
     </main>
 
     <footer>
-        <p>© 2026 Guia Histórico da Paraíba. FUNDAMENTOS SOCIOHISTÓRICOS DA EDUCAÇÃO.
-            <img scr="imagem 8.png" alt="logo da UFPB">
-            <img scr = "imagem 9.png" alt = "logo da CCAE">
-        </p>
+        <div class="footer-content">
+            <p>© 2026 Guia Histórico da Paraíba. <br>
+               <strong>FUNDAMENTOS SOCIOHISTÓRICOS DA EDUCAÇÃO</strong>
+            </p>
+            <div class="footer-logos">
+                <img src="imagem 8.png" alt="Logo UFPB">
+                <img src="imagem 9.png" alt="Logo CCAE">
+            </div>
+        </div>
     </footer>
 
     <script>
@@ -94,9 +97,7 @@
         }
 
         function startTimer() {
-            slideTimer = setInterval(() => {
-                showSlide(currentBg + 1);
-            }, 5000);
+            slideTimer = setInterval(() => { showSlide(currentBg + 1); }, 5000);
         }
 
         function resetTimer() {
@@ -104,15 +105,8 @@
             startTimer();
         }
 
-        btnNext.addEventListener('click', () => {
-            showSlide(currentBg + 1);
-            resetTimer();
-        });
-
-        btnPrev.addEventListener('click', () => {
-            showSlide(currentBg - 1);
-            resetTimer();
-        });
+        btnNext.addEventListener('click', () => { showSlide(currentBg + 1); resetTimer(); });
+        btnPrev.addEventListener('click', () => { showSlide(currentBg - 1); resetTimer(); });
 
         startTimer();
     </script>
